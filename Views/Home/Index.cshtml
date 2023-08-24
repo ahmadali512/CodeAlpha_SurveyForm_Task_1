@@ -1,0 +1,45 @@
+﻿@model CodeAlpha_Task_1.Models.Question1
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="text-center fs-3">
+            <p>Survey Form</p>
+        </div>
+        <div class="col-6">
+            <form method="post" asp-action="Index">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group mb-2">
+                    <label class="control-label">How familiar are you with the concept of artificial intelligence (AI)?</label>
+                    <input asp-for="Question_1" class="form-control" />
+                    <span asp-validation-for="Question_1" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="control-label">In which areas do you think AI has the most potential to make a positive impact? </label>
+                    <input asp-for="Question_2" class="form-control" />
+                    <span asp-validation-for="Question_2" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="control-label">How concerned are you about the ethical implications of AI, such as bias in algorithms and job displacement?</label>
+                    <input asp-for="Question_3" class="form-control" />
+                    <span asp-validation-for="Question_3" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="control-label">Do you currently use any AI-powered products or services in your daily life?</label>
+                    <input asp-for="Question_4" class="form-control" />
+                    <span asp-validation-for="Question_4" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="control-label">Would you be interested in learning more about AI and its applications through educational resources or courses?</label>
+                    <input asp-for="Question_5" class="form-control" />
+                    <span asp-validation-for="Question_5" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <input type="submit" value="Submit" class="btn btn-primary ms-auto" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
